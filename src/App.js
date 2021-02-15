@@ -84,6 +84,7 @@ function App() {
           <Pad
             key={clip.id}
             clip={clip}
+            id={clip.id}
             volume={volume}
             muted={muted}
             setRecording={setRecording}
@@ -155,6 +156,7 @@ function Pad({ clip, volume, muted, setRecording }) {
   return (
     <div
       onClick={playSound}
+      id={clip.id}
       className={`drum-pad btn btn-secondary p-5 m-5 ${
         active && "drum-pad btn-danger"
       }`}
